@@ -1,0 +1,343 @@
+/* TODO: The below classes are majorly used for about page */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+
+/* TODO: To load a font-family from a folder */
+
+@font-face {
+      font-family: "Booter - Zero Zero";
+      src: url("fonts/Booter - Zero Zero.woff") format("woff"),
+            url("fonts/Booter - Zero Zero.woff2") format("woff2");
+      font-weight: normal;
+      font-style: normal;
+}
+/* TODO:  To remove margin and padding for html and body elements*/
+html, body {
+      margin: 0;
+      padding: 0;
+}
+
+/* TODO: To remove margin at the top of the page */
+.nav ul {
+      margin: 0;
+}
+
+.nav li {
+      display: inline;
+}
+
+.main-header {
+      background-color: rgba(0, 0, 0, 0.6);
+      background-image: url("images/Header Background.jpg");
+      background-size: cover;
+      /* TODO: This multiplies background color and image as only one is usually
+      rendered by the CSS at a time. blend-mode allows both to be used simultaneousl */
+      background-blend-mode: multiply;
+      padding-bottom: 30px;
+}
+
+/* TODO: For inline elements, padding only works for right and left. To make it work For
+top and bottom, we apply display: inline-block property */
+.nav a {
+      display: inline-block;
+      padding: .5em;
+      color: white;
+      text-decoration: none;
+}
+
+.main-nav {
+      text-align: center;
+      font-size: 1.1em;
+      font-weight: lighter;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* TODO: To add more space to the inline list elements with nav element
+0 for top and bottom; 5%*/
+
+.main-nav li {
+      padding: 0 5%;
+}
+
+.nav a:hover {
+      background-color: rgba(255, 255, 255, .3);
+}
+/* TODO: To set some general properties for all html elements */
+
+*  {
+      box-sizing: border-box;
+      font-family: Raleway;
+      color: #777;
+
+}
+
+.band-name {
+      text-align: center;
+      margin: 0px;
+      font-size: 4em;
+      font-family: "Booter - Zero Zero";
+      font-weight: normal;
+      color: white;
+}
+
+.band-name-larger {
+      font-size: 8em;
+}
+
+.content-section {
+      margin: 1em;
+}
+
+.container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5em;
+}
+
+.section-header {
+      font-family: "Metal Mania";
+      font-size: 2.5em;
+      text-align: center;
+      color: #333;
+      font-weight: normal;
+}
+
+.about-band-image {
+      float: left;
+      width: 200px;
+      height: 200px;
+      margin: 15px;
+      border-radius: 50%;
+}
+
+.main-footer {
+      background-color: #56CCF2;
+      color: white;
+      padding: .25em 0;
+}
+
+.main-footer-container {
+      display: flex;
+      align-items: center;
+}
+
+.main-footer-container ul{
+      flex-grow: 1;
+      text-align: end;
+}
+
+.footer-nav li {
+      padding: 0 .5em;
+}
+
+.footer-nav img {
+      width: 30px;
+      height: 30px;
+}
+
+
+/* TODO: Below classes are majorly used for index page*/
+/* TODO: Everything class is immediately reused in index page, Followed by some classes
+above that are used for styling the header and footer*/
+
+/* TODO: To align text and padding of button in the header */
+.btn {
+      text-align: center;
+      vertical-align: middle;
+      padding: .67em .67em;
+      cursor: pointer;
+}
+
+.btn-header {
+      margin: .5em 15% 2em 15%;
+      color: white;
+      border: 2px solid #2D9CDB;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 0;
+      font-size: 1.5em;
+      font-weight: lighter;
+      padding-left: 2em;
+      padding-right: 2em;
+}
+
+.btn-header:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-play {
+      display: block;
+      margin: 0 auto;
+      color: #2D9CDB;
+      border-radius: 50%;
+      padding: 0;
+      width: 100px;
+      height: 100px;
+      font-size: 3.5em;
+}
+
+.tour-row {
+      border-bottom: 1px solid black;
+      padding-bottom: 1em;
+      margin-bottom: 1em;
+}
+
+/* TODO: For the tour-row at the last div in the section element. Removing the tour-grow
+class will remove the padding and margin bottom. To retain padding and margin botton while removing border line, the setting is overriding by .tour-row:last-child */
+
+.tour-row:last-child {
+      border-bottom: none;
+}
+
+.tour-item {
+      display: inline-block;
+      padding-right: .5em;
+}
+
+.tour-date {
+      color: #555;
+      width: 11%;
+      font-weight: bold;
+}
+
+.tour-city {
+      width: 24%;
+}
+
+.tour-arena {
+      width: 42%;
+}
+
+.tour-btn {
+      max-width: 19%;
+}
+
+.btn-primary {
+      color: white;
+      background-color: #56CCF2;
+      border: none;
+      border-radius: .5em;
+      font-weight: bold;
+}
+
+.btn-primary:hover {
+      background-color: #2D9CDB;
+}
+
+/* TODO: Additional behaviors for the store page can be found below. Some CSS classes
+selectors were used from above to style the section element. The other CSS selectors were
+custom made for the store page as shown below*/
+.shop-item {
+       margin: 30px;
+}
+.shop-item-title {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 15px;
+}
+.shop-item-image {
+      height: 250px;
+}
+.shop-item-details {
+      display: flex;
+      align-items: center;
+      padding: 5px;
+}
+.shop-item-price {
+      flex-grow: 1;
+      color: #333;
+}
+.shop-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+}
+.cart-header {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #333;
+}
+.cart-column {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid black;
+      margin-right: 1.5em;
+      padding-bottom: 10px;
+      margin-top: 10px;
+}
+.cart-row {
+      display: flex;
+}
+.cart-item {
+      width: 45%;
+      display: flex;
+      justify-content: end;
+}
+.cart-price {
+      width: 20%;
+}
+.cart-quantity {
+      width: 35%;
+}
+.cart-item-title {
+      color: #333;
+      margin-left: .5em;
+      font-size: 1.2em;
+}
+.cart-item-image {
+      width: 75px;
+      height: auto;
+      border-radius: .5em;
+}
+.btn-danger {
+      color: white;
+      background-color: #EB5757;
+      border: none;
+      border-radius: .3em;
+      font-weight: bold;
+}
+.btn-danger:hover {
+      background-color: #CC4C4C;
+}
+.cart-quantity-input {
+      height: 34px;
+      width: 50px;
+      border-radius: .5em;
+      border-color: #eee;
+      border: 1px solid #56CCF2;
+      color: #333;
+      padding: 0;
+      text-align: center;
+      font-size: 1.2em;
+      margin-right: 25px;
+}
+.cart-row:last-child {
+      border-bottom: 1px solid black;
+}
+.cart-row:last-child .cart-column {
+      border: none;
+}
+.cart-total {
+      text-align: end;
+      margin-top: 10px;
+      margin-right: 10px;
+}
+.cart-total-title {
+      font-weight: bold;
+      font-size: 1.3em;
+      color: black;
+      margin-right: 20px;
+}
+.cart-total-price {
+      color: #333;
+      font-size: 1.1em;
+}
+.btn-purchase {
+      display: block;
+      margin: 40px auto 80px auto;
+      font-size: 1.75em
+}
