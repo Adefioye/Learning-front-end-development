@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body >
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <form id="survey-form" action="">
+        <fieldset>
+            <legend></legend>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" value="Enter your name" required><br>
+
+            <label for="email">Email</label><br>
+            <input type="text" id="email" name="email" value="Enter your Email"required> <br>
+
+            <label for="number">Age (optional)</label><br>
+            <input type="text" id="number" name="number" value="Age"><br>
+
+            <label for="drop-down">Which option best describes your current role?</label><br>
+            <input list="drop-downs" id="drop-down" name="drop=down" value="Select current role">
+            <datalist id="drop-downs">
+                <option value="Student">
+                <option value="Full Time Job">
+                <option value="Full Time Learner">
+                <option value="Prefer not to say">
+                <option value="Other">
+            </datalist>
+
+            <fieldset>
+                <legend>Would you recommend freeCodeCamp to a friend?</legend>
+                <input type="radio" name="recommendation" value="definitely"> Definitely <br>
+                <input type="radio" name="recommendation" value="maybe"> Maybe <br>
+                <input type="radio" name="recommendation" value="not sure"> Not Sure <br>
+            </fieldset>
+
+            <label for="drop-down">What is your favorite feature of freeCodeCamp?</label><br>
+            <input list="drop-downs" id="drop-down" name="drop=down" value="Select an option">
+            <datalist id="drop-downs">
+                <option value="Challenges">
+                <option value="Projects">
+                <option value="Community">
+                <option value="Open Source">
+            </datalist>
+
+            <fieldset>
+                <legend>Would you recommend freeCodeCamp to a friend?</legend>
+                <input type="checkbox" name="need-improvement" value="Front-end Projects">Front-end Projects <br>
+                <input type="checkbox" name="need-improvement" value="Back-end Projects">Back-end Projects <br>
+                <input type="checkbox" name="need-improvement" value="Data Visualization">Data Visualization <br>
+                <input type="checkbox" name="need-improvement" value="Challenges">Challenges <br>
+                <input type="checkbox" name="need-improvement" value="Open Source Community">Open Source Community <br>
+                <input type="checkbox" name="need-improvement" value="Gitter help rooms">Gitter help rooms <br>
+                <input type="checkbox" name="need-improvement" value="Videos">Videos <br>
+                <input type="checkbox" name="need-improvement" value="City Meetups">City Meetups <br>
+                <input type="checkbox" name="need-improvement" value="Wiki">Wiki <br>
+                <input type="checkbox" name="need-improvement" value="Forum">Forum <br>
+                <input type="checkbox" name="need-improvement" value="Additional Courses">Additional Courses <br>
+            </fieldset>
+
+            <label for="text-area">Any comments or suggestions?</label> <br>
+            <textarea name="comments" id="text-area" cols="30" rows="10">Enter your comment here...</textarea> <br>
+
+            <input type="submit">
+
+
+
+        </fieldset>
+    </form>
+</body>
+</html>
