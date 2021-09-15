@@ -1,0 +1,50 @@
+h1 {
+    color: green;
+}
+
+h2 {
+    color: magenta;
+}
+
+p {
+    color: white;
+    background-color: black;
+}
+
+button {
+    color: red;
+    background-color: pink;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: monospace;
+    text-align: center;
+    font-weight: 100;
+    font-size: 40px;
+    letter-spacing: 20px;
+    text-decoration: underline wavy pink;
+}
+
+li {
+    color: blue;
+}
+
+done {
+    color: grey;
+}
+
+#clear {
+    color: white;
+    background: red;
+}
+
+header a {
+    font-size: 30px;
+    color: teal;
+}
+p#dislikes a {
+    font-weight: bold;
+    color: red;
+}
+
