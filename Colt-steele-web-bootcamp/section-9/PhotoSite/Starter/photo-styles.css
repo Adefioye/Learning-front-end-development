@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap);
+img {
+    width: 30%;
+    margin: calc(10%/6);
+}
+
+nav {
+    border-bottom: 2px solid lightgray;
+    font-family: Roboto, sans-serif;
+    margin-left: calc(10%/6);
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
