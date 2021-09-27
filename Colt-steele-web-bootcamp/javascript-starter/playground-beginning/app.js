@@ -134,6 +134,104 @@
 //     }
 // }
 
+// LEXICAL SCOPE
 
+// function bankRobbery() {
+//     const heroes = ['Spiderman', 'Black Panther', 'Wolverine'];
+//     function cryForHelp() {
+//         for (let hero of heroes) {
+//             console.log(`Please help us, ${hero.toUpperCase()}`);
+//         }
+//     }
+//     cryForHelp()
+// }
+
+// function square(num) {
+//     return Math.pow(num, 2);
+// }
+
+// const square = {
+//     area(side) {
+//         return Math.pow(side, 2);
+//     },
+//     perimeter(side) {
+//         return side * 4;
+//     }
+// }
+
+
+// const hen = {
+//     name: "Helen",
+//     eggCount: 0,
+//     layAnEgg() {
+//         this.eggCount += 1;
+//         return "EGG";
+//     }
+// }
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+// numbers.forEach( function (el) {
+//     if (el % 2 === 0) {
+//         console.log(el);
+//     }
+// })
+
+// movies.forEach(function(el) {
+//     console.log(`{el.score}/100`)
+// })
+
+// const fullNames = [{first: 'Albus', last: 'Dumbledore'}, {first: 'Harry', last: 'Potter'}, {first: 'Hermione', last: 'Granger'}, {first: 'Ron', last: 'Weasley'}, {first: 'Rubeus', last: 'Hagrid'}, {first: 'Minerva', last: 'McGonagall'}, {first: 'Severus', last: 'Snape'}];
+
+// const firstNames = fullNames.map(function (firstName) { return firstName.first});
+
+// const greet = name => {
+//     console.log(`Hey ${name}!`);
+// }
+
+// console.log("Hello!....")
+// setTimeout(() => {
+//     console.log("....are you still there?")
+// }, 5000);
+
+// console.log("Goodbye!");
+
+// Learning setInterval (This runs a specific adinfinitum using the
+// specified interval unless clearInterval is executed with an "id" input)
+
+// const id = setInterval(() => {
+//     console.log(Math.random())
+// }, 4000)
+
+// const validUserNames = userNames.filter(name => name.length < 10);
+
+// const validUserNames = array => array.filter(name => name.length < 10);
+
+// const allEvens = array => array.every(num => num % 2 === 0);
+
+// function allEvens(array) {
+//     for (let num of array) {
+//         if (num % 2 === 0) {
+//             return true
+//             break
+//         } 
+//         else {
+//             return false
+//         }
+//     }
+// }
+
+const prices = [9.99, 1.50, 19.99, 49.99, 30.50];
+
+let total = 0;
+for (let price of prices) {
+    total += price;
+}
+console.log(total);
+
+const totalPrice = prices.reduce((acc, price) => {
+    return acc + price
+})
+console.log(totalPrice);
 
 
