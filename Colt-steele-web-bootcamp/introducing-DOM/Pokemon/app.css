@@ -1,0 +1,23 @@
+#container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div img {
+    display: block;
+}
+
+/* section div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+section div {
+    text-align: center;
+}
+
+div p {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
