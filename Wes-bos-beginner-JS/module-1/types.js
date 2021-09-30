@@ -30,16 +30,16 @@
 
 // console.log(song);
 
-const name = 'Koko';
-const hello = `hello my name is ${name}. Nice to meet you. I am ${27 + 1} years old'`;
-const html = `
-  <div>
-    <h2>${name}</h2>
-    <p>${hello}</p>
-  </div>
-`;
+// const name = 'Koko';
+// const hello = `hello my name is ${name}. Nice to meet you. I am ${27 + 1} years old'`;
+// const html = `
+//   <div>
+//     <h2>${name}</h2>
+//     <p>${hello}</p>
+//   </div>
+// `;
 
-document.body.innerHTML = html;
+// document.body.innerHTML = html;
 
 
 
