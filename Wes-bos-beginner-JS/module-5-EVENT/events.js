@@ -50,3 +50,5 @@ photoEl.addEventListener("mousemove", function(event){
 // event when arrow function is used;
 
 
+
+
