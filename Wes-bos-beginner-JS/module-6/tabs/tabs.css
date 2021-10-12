@@ -1,0 +1,5 @@
+button[aria-selected="true"]{
+    background: yellow;
+    box-shadow: none;
+    color: rgba(0, 0, 0, 0.7);
+}
