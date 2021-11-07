@@ -30,7 +30,21 @@ function tellMeAboutTheButton() {
 button1.addEventListener("click", tellMeAboutTheButton);
 button2.addEventListener("click", tellMeAboutTheButton);
 
-function Pizza() {
-  console.log(this);
+// function Pizza() {
+//   console.log(this);
+//   console.log("Making a pizza");
+// }
+
+function Pizza(toppings = [], customer, id = "") {
   console.log("Making a pizza");
+
+  this.toppings = toppings;
+  this.customer = customer;
+  this.id = Math.floor(Math.random() * 16777215).toString(16);
 }
+
+const pepperoniPizza = new Pizza(["pepperoni"], "Wes Bos");
+const canadianPizza = new Pizza(
+  ["pepperoni", "mushrooms", "onion"],
+  "Kait Bos"
+);
