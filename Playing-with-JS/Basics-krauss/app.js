@@ -254,14 +254,212 @@ for "var"
 
 // leagueMessage.apply(bretLee);
 
-function gymMembership(fees) {
-  console.log(`${this.name} has ${this.total - fees} membership fees to pay`);
+// function gymMembership(fees) {
+//   console.log(`${this.name} has ${this.total - fees} membership fees to pay`);
+// }
+
+// const sukhi = {
+//   name: "sukhi",
+//   total: 1000,
+// };
+// const getFee = gymMembership.bind(sukhi, 100);
+// getFee();
+
+// PROTOTYPICAL INHERITANCE
+
+// To get prototype of built-in object type
+// const car = {};
+// console.log(Object.getPrototypeOf(car));
+
+// let auto = { drive: true, wheels: 4, gears: "automatic" };
+
+// const car = Object.create(auto);
+// console.log(Object.getPrototypeOf(car)); // This logs out the auto object
+
+// const book = {};
+// console.log(Object.getPrototypeOf(book));
+
+// let pizza = { base: "wheat", sauce: "tomato", cheese: "parmesan" };
+// const cheesePizza = Object.create(pizza);
+// console.log(Object.getPrototypeOf(cheesePizza));
+
+// let animal = { legs: 4, eat: true, nap: true };
+// let dog = { tail: true };
+// // To make animal the "object prototype of dog"
+// Object.setPrototypeOf(dog, animal);
+// let boston_terrier = { breed: "Boston Terrier" };
+// Object.setPrototypeOf(boston_terrier, dog);
+// console.log(boston_terrier);
+
+// const book = {
+//   educational: true,
+//   diagrams: true,
+//   author: "J.K",
+//   discount: 0,
+//   sale: function () {
+//     if (this.educational) {
+//       this.discount = 0.5;
+//     }
+//   },
+// };
+
+// const scienceFictionBook = new Object();
+// scienceFictionBook.educational = false;
+// Object.setPrototypeOf(scienceFictionBook, book);
+// console.log(scienceFictionBook);
+
+// function SuperPower(invisible, talk, bonus) {
+//   this.invisible = true;
+//   this.talk = "deeble";
+//   this.bonus = 1000;
+//   this.dialogue = function () {
+//     console.log(`My super talk is ${this.talk}`);
+//   };
+// }
+
+// const invisibleGirl = new SuperPower();
+// console.log(Object.getPrototypeOf(invisibleGirl));
+
+// function SuperPower(talk, bonus) {
+//   this.talk = "deeble";
+//   this.bonus = 1000;
+//   this.dialogue = function () {
+//     console.log(`My super talk is ${this.talk}`);
+//   };
+// }
+
+// function Invisible(talk) {
+//   SuperPower.call(this);
+//   this.invisible = "invisible";
+// }
+
+// function Teleport(talk) {
+//   SuperPower.call(this);
+//   this.power = "teleport";
+// }
+
+// let invisibleGirl = new Invisible();
+// let teleportDog = new Teleport();
+// console.log(Object.getPrototypeOf(teleportDog));
+
+// function SchoolFranchise(accredited, teachers, online) {
+//   this.accredited = true;
+//   this.teachers = false;
+//   this.online = true;
+// }
+
+// function JuniorHigh(name, type) {
+//   SchoolFranchise.call(this);
+//   this.name = name;
+//   this.type = "Junior High";
+// }
+
+// let huronPublic = new JuniorHigh("Huron");
+// console.log(huronPublic);
+
+// class Company {
+//   constructor(name, funding, employees) {
+//     this.name = name;
+//     this.funding = funding;
+//     this.employees = employees;
+//   }
+// }
+
+// let zimbaPay = new Company("Zimba Pay", 1000000, 50);
+// console.log(Object.getPrototypeOf(zimbaPay));
+
+// INSTANCE METHOD
+// class Person {
+//   constructor(name, age, hobby) {
+//     this.name = name;
+//     this.age = age;
+//     this.hobby = hobby;
+//   }
+//   personGreeting() {
+//     console.log(`Hi I am ${this.name} and I like ${this.hobby}`);
+//   }
+// }
+
+// let person1 = new Person("Rover", 10, "Coding");
+// console.log(person1.name);
+// person1.personGreeting();
+
+// class Company {
+//   constructor(name, funding, employees) {
+//     this.name = name;
+//     this.funding = funding;
+//     this.employees = employees;
+//   }
+
+//   equity() {
+//     console.log(0.1 * this.funding);
+//   }
+// }
+// const purpleMoon = new Company("Purple moon", 5000000, 50);
+// const equity = purpleMoon.equity();
+// console.log(equity);
+
+// PUBLIC INSTANCE FIELDS
+// class Person {
+//   name = "";
+//   age = 10;
+//   hobby = "";
+//   constructor() {}
+// }
+
+// console.log(Person.age);
+
+// let person1 = new Person();
+
+// person1.age = 30;
+// console.log(Person.age);
+
+// PRIVATE INSTANCE FIELDS
+// class InternalDetails {
+//   #grossProfit;
+//   #netProfit;
+//   #tax;
+//   #expenses;
+//   constructor(grossProfit, expenses, tax, netProfit) {
+//     this.#grossProfit = grossProfit;
+//     this.#expenses = expenses;
+//     this.#tax = tax;
+//   }
+
+//   getNet() {
+//     this.#netProfit = this.#grossProfit - this.#expenses * this.#tax;
+//     return this.#netProfit;
+//   }
+// }
+
+// let mooCompany = new InternalDetails(30, 1, 1, 0);
+// console.log(mooCompany.getNet());
+
+//
+class WeddingPlanner {
+  static llc = "Wedding Gee LLC";
+  static taxNumber = "319000";
+  #company = "Wedding Gee";
+  #office = "101 Plum Street, Chicago";
+  #planner = "Keanna Rose";
+  clientName;
+  clientBudget;
+
+  constructor(clientName, clientBudget) {
+    this.clientName = clientName;
+    this.clientBudget = clientBudget;
+  }
+
+  welcomeMessage() {
+    console.log(
+      `Hi, ${this.clientName}! Welcome to ${this.#company}, I am your planner ${
+        this.#planner
+      }. Please confirm that your budget is ${this.clientBudget}`
+    );
+  }
 }
 
-const sukhi = {
-  name: "sukhi",
-  total: 1000,
-};
+let missSpadina = new WeddingPlanner("J. Spadina", 50000);
+missSpadina.welcomeMessage();
 
-const getFee = gymMembership.bind(sukhi, 100);
-getFee();
+console.log(Object.getPrototypeOf(missSpadina));
