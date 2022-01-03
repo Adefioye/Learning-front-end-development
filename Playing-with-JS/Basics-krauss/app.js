@@ -436,30 +436,228 @@ for "var"
 // console.log(mooCompany.getNet());
 
 //
-class WeddingPlanner {
-  static llc = "Wedding Gee LLC";
-  static taxNumber = "319000";
-  #company = "Wedding Gee";
-  #office = "101 Plum Street, Chicago";
-  #planner = "Keanna Rose";
-  clientName;
-  clientBudget;
+// class WeddingPlanner {
+//   static llc = "Wedding Gee LLC";
+//   static taxNumber = "319000";
+//   #company = "Wedding Gee";
+//   #office = "101 Plum Street, Chicago";
+//   #planner = "Keanna Rose";
+//   clientName;
+//   clientBudget;
 
-  constructor(clientName, clientBudget) {
-    this.clientName = clientName;
-    this.clientBudget = clientBudget;
-  }
+//   constructor(clientName, clientBudget) {
+//     this.clientName = clientName;
+//     this.clientBudget = clientBudget;
+//   }
 
-  welcomeMessage() {
-    console.log(
-      `Hi, ${this.clientName}! Welcome to ${this.#company}, I am your planner ${
-        this.#planner
-      }. Please confirm that your budget is ${this.clientBudget}`
-    );
-  }
-}
+//   welcomeMessage() {
+//     console.log(
+//       `Hi, ${this.clientName}! Welcome to ${this.#company}, I am your planner ${
+//         this.#planner
+//       }. Please confirm that your budget is ${this.clientBudget}`
+//     );
+//   }
+// }
 
-let missSpadina = new WeddingPlanner("J. Spadina", 50000);
-missSpadina.welcomeMessage();
+// let missSpadina = new WeddingPlanner("J. Spadina", 50000);
+// missSpadina.welcomeMessage();
 
-console.log(Object.getPrototypeOf(missSpadina));
+// console.log(Object.getPrototypeOf(missSpadina));
+
+// class DonutGiveAway {
+//   static #max_instances = 5;
+//   static #instances = 0;
+//   flavor;
+//   constructor(flavor) {
+//     DonutGiveAway.#instances++;
+//     if (DonutGiveAway.#instances > DonutGiveAway.#max_instances) {
+//       throw new Error("Unable to create a new donut instance");
+//     } else {
+//       this.flavor = flavor;
+//     }
+//   }
+// }
+
+// let donut1 = new DonutGiveAway("Java Javascript");
+// let donut2 = new DonutGiveAway("Snappy Semicolon");
+// console.log(donut1);
+// console.log(donut2);
+// console.log(Object.keys(donut1));
+// console.log(Object.keys(donut2));
+
+// INHERITANCE OF A CLASS
+// class Dog {
+//   constructor(legs, tail) {
+//     this.legs = 4;
+//     this.tail = 1;
+//   }
+// }
+
+// class Breed extends Dog {
+//   breed = "Boston Terrier";
+// }
+
+// const rocko = new Breed();
+
+// console.log(rocko);
+// console.log(Object.keys(rocko));
+// console.log(Object.entries(rocko));
+
+//  USING SUPER KEYWORD
+// class Company {
+//   constructor(brand) {
+//     this.brand = brand;
+//   }
+// }
+
+// class Game extends Company {
+//   constructor(brand, name) {
+//     super(brand);
+//     this.name = name;
+//   }
+//   show() {
+//     console.log(`Game is by ${this.brand} and the name is ${this.name}`);
+//   }
+// }
+// const favoriteGame = new Game("Nintendo", "Animal Crossing");
+// console.log(favoriteGame);
+// favoriteGame.show();
+
+// class Dog {
+//   constructor(legs, tail) {
+//     this.legs = 4;
+//     this.tail = 1;
+//   }
+// }
+
+// class Breed extends Dog {
+//   constructor(breed) {
+//     super();
+//     this.breed = breed;
+//   }
+// }
+
+// const doggie = new Breed("Boston Berrier");
+// console.log(doggie);
+
+// class MusicLabel {
+//   constructor(labelName) {
+//     this.labelName = "Avocado Label";
+//   }
+
+//   static LabelMotto() {
+//     console.log("Hello and Welcome!");
+//   }
+// }
+
+// class Jazz extends MusicLabel {
+//   constructor(artist, labelName, genre) {
+//     super(labelName);
+//     this.artist = artist;
+//     this.genre = "Jazz";
+//   }
+// }
+
+// const richieZoo = new Jazz("Richie Zoo");
+// console.log(richieZoo);
+
+// class User {
+//   name;
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   hello() {
+//     console.log(`Hello, ${this.name}`);
+//   }
+// }
+
+// const user1 = new User("Zulezoo");
+// const user2 = {};
+// console.log(user1 instanceof User);
+// console.log(user2 instanceof User);
+
+// class User {
+//   name;
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   hello() {
+//     console.log(`Hello, ${this.name}`);
+//   }
+// }
+
+// class Admin extends User {
+//   accesslevel;
+//   constructor(name, accesslevel) {
+//     super(name);
+//     this.accesslevel = accesslevel;
+//   }
+// }
+
+// const employee = new Admin("Merengue", 1);
+
+// console.log(employee instanceof Admin);
+// console.log(employee instanceof User);
+
+// // Using the constructor property to affirm the specific class used for instantiation of the object
+// console.log(employee.constructor);
+// console.log(employee.constructor === Admin);
+// console.log(employee.constructor === User);
+
+// let donut = {
+//   units: 100,
+//   flavors: ["strawberry", "oreo", "java"],
+//   price: 5.99,
+//   // getDonutFlavor: function () {
+//   //   flavorList = this.flavors;
+//   //   for (let flavor of flavorList) {
+//   //     console.log(flavor);
+//   //   }
+//   // },
+//   get getDonutFlavor() {
+//     flavorList = this.flavors;
+//     for (let flavor of flavorList) {
+//       console.log(flavor);
+//     }
+//   },
+//   // setDonutFlavor: function (params) {
+//   //   this.flavors.push(params);
+//   // },
+
+//   set setDonutFlavor(params) {
+//     this.flavors.push(params);
+//   },
+// };
+
+// // donut.getDonutFlavor();
+// // donut.setDonutFlavor("Chocolate");
+// donut.setDonutFlavor = "Chocolate";
+// console.log(donut.flavors);
+// donut.getDonutFlavor;
+
+// Using Object.defineProperty
+const gamingPC = {};
+Object.defineProperty(gamingPC, "graphicsCard", {
+  configurable: false,
+  enumerable: false,
+  writable: true,
+  value: "RTX2060",
+});
+
+console.log(gamingPC.graphicsCard);
+// Make a setter method
+Object.defineProperty(gamingPC, "newCard", {
+  set: function (cardName) {
+    this.graphicsCard = cardName;
+  },
+});
+
+Object.defineProperty(gamingPC, "getCard", {
+  get: function () {
+    console.log(this.graphicsCard);
+  },
+});
+
+gamingPC.newCard = "GeForce RTX 2070 Super";
+console.log(gamingPC.graphicsCard);
+gamingPC.getCard;
