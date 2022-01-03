@@ -636,28 +636,69 @@ for "var"
 // donut.getDonutFlavor;
 
 // Using Object.defineProperty
-const gamingPC = {};
-Object.defineProperty(gamingPC, "graphicsCard", {
-  configurable: false,
-  enumerable: false,
-  writable: true,
-  value: "RTX2060",
-});
+// const gamingPC = {};
+// Object.defineProperty(gamingPC, "graphicsCard", {
+//   configurable: false,
+//   enumerable: false,
+//   writable: true,
+//   value: "RTX2060",
+// });
 
-console.log(gamingPC.graphicsCard);
-// Make a setter method
-Object.defineProperty(gamingPC, "newCard", {
-  set: function (cardName) {
-    this.graphicsCard = cardName;
-  },
-});
+// console.log(gamingPC.graphicsCard);
+// // Make a setter method
+// Object.defineProperty(gamingPC, "newCard", {
+//   set: function (cardName) {
+//     this.graphicsCard = cardName;
+//   },
+// });
 
-Object.defineProperty(gamingPC, "getCard", {
-  get: function () {
-    console.log(this.graphicsCard);
-  },
-});
+// Object.defineProperty(gamingPC, "getCard", {
+//   get: function () {
+//     console.log(this.graphicsCard);
+//   },
+// });
 
-gamingPC.newCard = "GeForce RTX 2070 Super";
-console.log(gamingPC.graphicsCard);
-gamingPC.getCard;
+// gamingPC.newCard = "GeForce RTX 2070 Super";
+// console.log(gamingPC.graphicsCard);
+// gamingPC.getCard;
+
+// let console1 = {
+//   one: "Nintendo Switch",
+//   two: "XBox",
+//   three: "PlayStation",
+//   four: "Gameboy",
+// };
+// let console2 = {};
+
+// for (key in console1) {
+//   console2[key] = console1[key];
+// }
+
+// console.log(console2);
+
+// console2.one = "Sega";
+
+// console.log(console1);
+
+// const city = {
+//   name: "Toronto",
+//   coordinates: "43.6532° N, 79.3832° W",
+//   streets: {
+//     North: "Bathurst",
+//     South: "Queens",
+//     West: "Bathurst",
+//     East: "Spadina",
+//   },
+//   population: 3190000,
+// };
+
+// const cityClone = { ...city };
+
+// cityClone.streets.North = "St.George";
+// cityClone.name = "Toronto clone";
+// console.log(city);
+// console.log(cityClone);
+
+let a = {};
+let b = {};
+console.log(a === b);
