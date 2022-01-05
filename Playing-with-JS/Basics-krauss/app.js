@@ -699,6 +699,6 @@ for "var"
 // console.log(city);
 // console.log(cityClone);
 
-let a = {};
-let b = {};
-console.log(a === b);
+// let a = {};
+// let b = {};
+// console.log(a === b);
