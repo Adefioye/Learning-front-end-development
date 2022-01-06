@@ -282,3 +282,29 @@ let eshoppe = [
     price: "$10.99",
   },
 ];
+
+// const sortByPrice = eshoppe.sort((a, b) => {
+//   let parseA = Number(a.price.split("$").pop());
+//   let parseB = Number(b.price.split("$").pop());
+//   return parseA - parseB;
+// });
+// console.log(sortByPrice);
+
+// const sortByName = eshoppe.sort(function (a, b) {
+//   let textA = a.name.toLowerCase();
+//   let textB = b.name.toLowerCase();
+//   return textA.localeCompare(textB);
+// });
+// // console.log(sortByName);
+// let prices = [199.99, 89.75, 62.25, 13.99, 8200.99, 79.95];
+// // [199.99, 89.75, 10, 10, 8200.99, 79.95];
+// console.log(prices.fill(10, 2, 4));
+
+// let prices = [199.99, 89.75, 62.25, 13.99, 8200.99, 79.95];
+// let index = prices.findIndex((price) => price === 8200.99);
+
+// prices[index] = 9900;
+// console.log(prices);
+
+let items = ["Calculator", "Laptop", "Console", "USB", "Keyboard"];
+console.log(items.sort().reverse());
