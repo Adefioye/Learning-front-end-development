@@ -417,59 +417,30 @@ let eshoppe = [
 //     })
 // );
 
-let tasks = [
-  {
-    day: "Monday",
-    minutes: 480,
-    tasks: "client work, coding",
-  },
-  {
-    day: "Tuesday",
-    minutes: 80,
-    tasks: "reading, coding",
-  },
-  {
-    day: "Wednesday",
-    minutes: 300,
-    tasks: "writing, working out",
-  },
-  {
-    day: "Thursday",
-    minutes: 280,
-    tasks: "client work, coding",
-  },
-  {
-    day: "Friday",
-    minutes: 380,
-    tasks: "client work",
-  },
-  {
-    day: "Saturday",
-    minutes: 180,
-    tasks: "coding",
-  },
-  {
-    day: "Sunday",
-    minutes: 40,
-    tasks: "reading, working out",
-  },
+// let nestedArray = [[0, [1, 2]], 3, [9], [10, 12]];
+// console.log(nestedArray.flat());
+
+let weather = [
+  [35, 30, 32, 31, 33],
+  [30, 32, 34, 31, 30],
+  [30, 30, 31, 29, 30],
+  [29, 30, 31, 29, 30],
+  [29, 28, 30, 29, 30],
 ];
 
-let task = "client work";
-
-const clientWork = tasks.filter((item) => item.tasks.includes(task));
-console.log(clientWork);
-
-const clientWorkWithHours = clientWork.map((item) => {
-  return (item.hours = item.minutes / 60);
-});
-const totalRatePerDay = clientWorkWithHours
-  .filter((item) => item > 5)
-  .map((item) => item * 35);
-console.log(totalRatePerDay);
-
+const tempGreaterthan33 = [];
+for (let i = 0; i < weather.length; i++) {
+  const item = weather[i];
+  for (let j = 0; j < item.length; j++) {
+    let temp = item[j];
+    if (temp >= 33) {
+      tempGreaterthan33.push(temp);
+    }
+  }
+}
+console.log(tempGreaterthan33);
 console.log(
-  totalRatePerDay.reduce((acc, value) => {
+  tempGreaterthan33.reduce((acc, value) => {
     return acc + value;
   }, 0)
 );
