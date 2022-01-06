@@ -299,12 +299,177 @@ let eshoppe = [
 // let prices = [199.99, 89.75, 62.25, 13.99, 8200.99, 79.95];
 // // [199.99, 89.75, 10, 10, 8200.99, 79.95];
 // console.log(prices.fill(10, 2, 4));
-
+// let items = ["Calculator", "Laptop", "Console", "USB", "Keyboard"];
+// console.log(items.sort().reverse());
 // let prices = [199.99, 89.75, 62.25, 13.99, 8200.99, 79.95];
 // let index = prices.findIndex((price) => price === 8200.99);
 
 // prices[index] = 9900;
 // console.log(prices);
 
-let items = ["Calculator", "Laptop", "Console", "USB", "Keyboard"];
-console.log(items.sort().reverse());
+// let arrayNum =[1, 1.89, 319000, 30000];
+// let copyNum = [...arrayNum];
+// arrayNum.push(8200);
+// console.log(copyNum);
+
+// let array1 = [10, 20, 30, 40];
+// let array2 = [];
+// console.log(array1.reverse().map((item) => item * 2));
+// let arr = [1, 10, 10, 2];
+// let reducedValue = arr.reduce((acc, value) => {
+//   return acc * value;
+// }, 2);
+
+// console.log(reducedValue);
+// let cities = [
+//   {
+//     name: "Albuquerque",
+//     population: 2304004,
+//   },
+//   {
+//     name: "Toronto",
+//     population: 547569284,
+//   },
+//   {
+//     name: "Kuwait city",
+//     population: 39302848,
+//   },
+//   {
+//     name: "Vancouver",
+//     population: 7834751,
+//   },
+// ];
+
+// let totalPopulation = cities.reduce((acc, value) => {
+//   return acc + value.population;
+// }, 0);
+// console.log(totalPopulation);
+
+// let userData = [
+//   {
+//     email: "user1@hello.com",
+//     name: "user 1",
+//     type: "regular",
+//   },
+//   {
+//     email: "user2@hello.com",
+//     name: "user 2",
+//     type: "admin",
+//   },
+//   {
+//     email: "user3@hello.com",
+//     name: "user 3",
+//     type: "admin",
+//   },
+//   {
+//     email: "user4@hello.com",
+//     name: "user 4",
+//     type: "regular",
+//   },
+// ];
+// let keyword = "admin";
+
+// console.log(userData.filter((item) => item.type === keyword));
+
+// let wordArray = [
+//   "dog",
+//   "pineapple",
+//   "letter",
+//   "technology",
+//   "chatter",
+//   "donut",
+// ];
+// console.log(wordArray.filter((item) => item.includes("er")));
+
+// let numbers = [2, 4, 5, 7, 12, 13, 17, 19, 24, 29, 31, 33, 41, 43, 47, 53];
+// let primeNumbers = numbers.filter((item) => {
+//   if (item > 1) {
+//     for (i = 2; i < item; i++) {
+//       if (item % i === 0) {
+//         return false;
+//         break;
+//       } else {
+//         return true;
+//       }
+//     }
+//   }
+// });
+// console.log(primeNumbers);
+// function isPrime(num) {
+//   for (let i = 2; num > i; i++) {
+//     if (num % i === 0) {
+//       return num;
+//     }
+//   }
+//   return false;
+// }
+// console.log(numbers.filter(isPrime));
+
+// let words = ["ae", "baed", "led", "ce", "kaede"];
+// console.log(words.filter((item) => item.includes("ae") && item.length > 3));
+// console.log(
+//   words
+//     .filter((item) => item.includes("ae"))
+//     .map((item) => {
+//       if (item.length > 3) {
+//         return item;
+//       }
+//     })
+// );
+
+let tasks = [
+  {
+    day: "Monday",
+    minutes: 480,
+    tasks: "client work, coding",
+  },
+  {
+    day: "Tuesday",
+    minutes: 80,
+    tasks: "reading, coding",
+  },
+  {
+    day: "Wednesday",
+    minutes: 300,
+    tasks: "writing, working out",
+  },
+  {
+    day: "Thursday",
+    minutes: 280,
+    tasks: "client work, coding",
+  },
+  {
+    day: "Friday",
+    minutes: 380,
+    tasks: "client work",
+  },
+  {
+    day: "Saturday",
+    minutes: 180,
+    tasks: "coding",
+  },
+  {
+    day: "Sunday",
+    minutes: 40,
+    tasks: "reading, working out",
+  },
+];
+
+let task = "client work";
+
+const clientWork = tasks.filter((item) => item.tasks.includes(task));
+console.log(clientWork);
+
+const clientWorkWithHours = clientWork.map((item) => {
+  return (item.hours = item.minutes / 60);
+});
+const totalRatePerDay = clientWorkWithHours
+  .filter((item) => item > 5)
+  .map((item) => item * 35);
+console.log(totalRatePerDay);
+
+console.log(
+  totalRatePerDay.reduce((acc, value) => {
+    return acc + value;
+  }, 0)
+);
