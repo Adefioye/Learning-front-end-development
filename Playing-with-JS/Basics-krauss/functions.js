@@ -119,11 +119,11 @@
 //   }
 // }
 // adder(1, 2, 3, 4, 5, 6, 7, 8, 9);
-function sum(...params) {
-  let total = 0;
-  params.forEach((item) => {
-    total += item;
-  });
-  console.log(total);
-}
-sum(1, 2, 3, 4, 5, 6, 7, 8, 9);
+// function sum(...params) {
+//   let total = 0;
+//   params.forEach((item) => {
+//     total += item;
+//   });
+//   console.log(total);
+// }
+// sum(1, 2, 3, 4, 5, 6, 7, 8, 9);
